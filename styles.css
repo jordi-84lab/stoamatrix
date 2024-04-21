@@ -1,0 +1,42 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    padding: 30px;
+}
+
+body, html {
+    height: 100%; /* Asegura que el elemento cubra toda la altura de la ventana */
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Crear un pseudo-elemento para el fondo borroso */
+body::before {
+    content: '';
+    position: fixed; /* Fixed para que el fondo no se mueva con el scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg'); /* Asegúrate de poner la ruta correcta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+
+    /* Aplicar desenfoque y transparencia al fondo */
+    filter: blur(8px);
+    opacity: 0.3;
+}
+
+/* Contenedor del contenido para evitar que se apliquen los estilos del fondo */
+.content {
+    position: relative; /* Relativo para posicionarse correctamente sobre el fondo */
+    z-index: 1; /* Mayor z-index para que el contenido esté sobre el fondo */
+}
+
+
+canvas {
+    width: 100%;       /* Hace que el canvas se ajuste al ancho completo de su contenedor */
+    max-width: none;   /* Elimina el límite del ancho máximo */
+}
