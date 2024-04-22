@@ -37,7 +37,7 @@ body::before {
 
 
 canvas {
-    width: 100%; /* O el ancho que prefieras */
+    width: 70%; /* O el ancho que prefieras */
     display: block; /* Hace que el canvas se trate como un bloque */
     margin: 50 auto; /* Margen automático para centrar horizontalmente */
 }
