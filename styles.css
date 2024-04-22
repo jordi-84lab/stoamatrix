@@ -1,43 +1,54 @@
 body {
-    font-family: 'Roboto Slab', serif;
-    text-align: center;
-    padding: 30px;
+    font-family: 'Roboto Slab', serif; /* Aplica la fuente Roboto Slab a todo el cuerpo del documento */
+    text-align: center; /* Centra el texto de todos los elementos dentro del cuerpo */
+    padding: 30px; /* Añade un relleno alrededor del contenido del cuerpo para evitar que toque los bordes de la ventana del navegador */
+    margin: 0; /* Elimina los márgenes predeterminados del navegador para el cuerpo */
 }
 
 body, html {
-    height: 100%; /* Asegura que el elemento cubra toda la altura de la ventana */
-    margin: 0;
-    font-family: 'Roboto Slab', serif;
+    height: 100%; /* Asegura que el elemento cuerpo y html cubran toda la altura de la ventana del navegador */
+    margin: 0; /* Establece el margen a cero para eliminar cualquier espacio adicional alrededor de estos elementos */
+    padding: 0; /* Elimina cualquier relleno predeterminado del navegador */
+    font-family: 'Roboto Slab', serif; /* Aplica la fuente Roboto Slab */
 }
 
+/* Aplica un fondo borroso usando un pseudo-elemento */
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg');
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    filter: blur(8px);
-    opacity: 0.3;
+    content: ''; /* Necesario para que el pseudo-elemento funcione */
+    position: fixed; /* Mantiene el fondo fijo durante el desplazamiento */
+    top: 0; /* Alinea el fondo desde el borde superior */
+    left: 0; /* Alinea el fondo desde el borde izquierdo */
+    right: 0; /* Alinea el fondo hasta el borde derecho */
+    bottom: 0; /* Alinea el fondo hasta el borde inferior */
+    background-image: url('https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg'); /* Asegúrate de poner la ruta correcta de tu imagen */
+    background-size: cover; /* Asegura que la imagen de fondo cubra completamente el espacio */
+    background-position: center; /* Centra la imagen de fondo */
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+    filter: blur(8px); /* Aplica un efecto de desenfoque al fondo */
+    opacity: 0.3; /* Reduce la opacidad del fondo para suavizar la imagen */
 }
 
+/* Estiliza los contenedores para utilizar flexbox y ajustar el contenido de forma adecuada */
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Ajusta la altura para centrar verticalmente */
-    position: relative;
-    z-index: 1;
+    display: flex; /* Habilita Flexbox para este contenedor */
+    flex-direction: column; /* Organiza los hijos del contenedor en una columna */
+    justify-content: center; /* Centra los hijos verticalmente dentro del contenedor */
+    align-items: center; /* Centra los hijos horizontalmente dentro del contenedor */
+    height: 100vh; /* Asegura que el contenedor tenga la altura de la ventana del navegador */
+    position: relative; /* Establece la posición relativa para el z-index */
+    z-index: 1; /* Coloca el contenido sobre el fondo */
+    padding: 20px; /* Añade un relleno alrededor del contenido dentro del contenedor */
 }
 
+/* Ajusta los márgenes de los títulos h2 y las descripciones h4 para reducir el espacio entre ellos */
+h2, h4 {
+    margin-top: 0.5em; /* Reduce el margen superior */
+    margin-bottom: 0.5em; /* Reduce el margen inferior */
+}
+
+/* Estiliza los elementos canvas para adaptar su tamaño y centrado */
 canvas {
-    width: 80%; /* Controla el ancho del canvas aquí */
-    max-width: none;
-    margin: 0 auto; /* Centrado horizontal automático */
+    width: 80%; /* Establece el ancho del canvas al 80% del contenedor */
+    max-width: none; /* Elimina cualquier límite al ancho máximo */
+    margin: 0 auto; /* Centra el canvas horizontalmente dentro de su contenedor */
 }
-
