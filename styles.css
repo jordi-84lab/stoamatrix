@@ -37,6 +37,6 @@ body::before {
 
 
 canvas {
-    width: 100%;       /* Hace que el canvas se ajuste al ancho completo de su contenedor */
-    max-width: none;   /* Elimina el límite del ancho máximo */
+    width: 90%;       /* Hace que el canvas se ajuste al ancho completo de su contenedor */
+    max-width: auto;   /* Elimina el límite del ancho máximo */
 }
