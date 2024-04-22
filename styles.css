@@ -7,37 +7,37 @@ body {
 body, html {
     height: 100%; /* Asegura que el elemento cubra toda la altura de la ventana */
     margin: 0;
-    padding: 0;
     font-family: 'Roboto Slab', serif;
 }
 
-/* Crear un pseudo-elemento para el fondo borroso */
 body::before {
     content: '';
-    position: fixed; /* Fixed para que el fondo no se mueva con el scroll */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg'); /* Asegúrate de poner la ruta correcta de tu imagen */
+    background-image: url('https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg');
     background-size: cover;
     background-position: center;
-    z-index: -1; /* Coloca el fondo detrás del contenido */
-
-    /* Aplicar desenfoque y transparencia al fondo */
+    z-index: -1;
     filter: blur(8px);
     opacity: 0.3;
 }
 
-/* Contenedor del contenido para evitar que se apliquen los estilos del fondo */
-.content {
-    position: relative; /* Relativo para posicionarse correctamente sobre el fondo */
-    z-index: 1; /* Mayor z-index para que el contenido esté sobre el fondo */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura para centrar verticalmente */
+    position: relative;
+    z-index: 1;
 }
-
 
 canvas {
-    width: 30%; /* O el ancho que prefieras */
-    display: block; /* Hace que el canvas se trate como un bloque */
-    margin: 50 auto; /* Margen automático para centrar horizontalmente */
+    width: 80%; /* Controla el ancho del canvas aquí */
+    max-width: none;
+    margin: 0 auto; /* Centrado horizontal automático */
 }
+
