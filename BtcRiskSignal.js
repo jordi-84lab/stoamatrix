@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
           title: 'Date'
         },
         yaxis: {
-          title: 'Risk Signal',
+          title: '',
           side: 'right'
         }, // Cambia el título del eje Y
         margin: {
