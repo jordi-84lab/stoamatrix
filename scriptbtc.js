@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 x: dates,
                 y: prices,
                 mode: 'lines',
-                line: { color: 'grey', width: 2 },
+                line: { color: 'teal', width: 1 },
                 name: 'BTC Price'
             };
 
